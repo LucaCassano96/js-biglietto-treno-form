@@ -1,0 +1,67 @@
+
+body{
+    background-color: darkgrey;
+}
+
+#ticket{
+    width: 800px;
+    margin: 100px auto;
+    background-color: rgba(125, 249, 249, 0.749);
+    padding: 10px 0;
+    
+}
+
+h2{
+    text-align: center;
+    padding: 15px 0;
+    color:rgba(98, 55, 228, 0.749);
+    font-size: 2rem;
+}
+
+.user-input{
+    width: 700px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.749);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    box-shadow: 3px 3px 2px 1px rgba(0, 0, 255, 0.13);
+}
+
+.valueuser{
+
+    color:rgba(98, 55, 228, 0.749);
+    font-size: 20px;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.user-input input, button{
+    border-radius: 5px;
+    border: 2px solid rgba(98, 55, 228, 0.749);
+    margin-bottom: 0px;
+    padding: 10px;
+}
+
+#demo-1, #demo-2, #demo-3{
+    text-align: center;
+    color: blue;
+    margin: 5px 0;
+    font-size: 18px;
+}
+
+#biglietto{
+    margin: 20px 0;
+    padding: 30px;
+    border: 1px solid #000;
+    font-size: 18px;
+    background-color:rgba(98, 55, 228, 0.749);
+    color: rgb(255, 255, 255);
+    
+}
+
+.active{
+
+
+    
+}

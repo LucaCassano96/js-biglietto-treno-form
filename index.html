@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>biglietto-treno-form</title>
+</head>
+
+<body>
+    
+  <main id="ticket">
+
+    <h2>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h2>
+
+    <section class="user-input">
+
+        <div>
+            <div class="valueuser">Nome e Cognome</div>
+            <input type="text" id="name">
+        </div>
+        
+        <div>
+            <div class="valueuser">Km da percorrere</div>
+            <input type="text" id="distance">
+        </div>
+        
+        <div>
+            <div class="valueuser">Età passeggero</div>
+            <input type="text" id="age">
+        </div>
+        
+      
+
+    </section>
+
+    <section class="user-input">
+       
+        <div class="valueuser">
+            <button  onclick="valuesUser()">Genera</button>
+        </div>
+
+    </section>
+
+    
+    <h2> IL TUO BIGLIETTO </h2>
+
+    <section class="user-input">
+
+        <div>
+            <div class="valueuser">
+                Nome passeggero
+            </div>
+            <div id="value-1"></div>
+        </div>
+
+        <div>
+            <div class="valueuser">
+                Km da percorrere
+            </div>
+            <div id="value-2"></div>
+        </div>
+
+        <div>
+            <div class="valueuser">
+                Età passeggero
+            </div>
+            <div id="value-3"></div>
+        </div>
+
+
+    </section>
+
+    <section id="show" class="user-input">
+
+        <div id="biglietto">Ciao a tutti</div>
+
+    </section>
+
+   
+
+  </main>
+
+
+
+    
+
+
+
+    <script src="javascript/file.js"></script>
+</body>
+
+</html>
