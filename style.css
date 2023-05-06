@@ -1,67 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 body{
     background-color: darkgrey;
+    font-family: 'Roboto', sans-serif;
 }
 
-#ticket{
-    width: 800px;
+#form_biglietto{
+    width: 1000px;
+    min-height: 100px;
+    background-color: rgb(226, 43, 223);
     margin: 100px auto;
-    background-color: rgba(125, 249, 249, 0.749);
-    padding: 10px 0;
-    
+    padding: 30px;
 }
 
-h2{
+h1{
+    color: white;
     text-align: center;
-    padding: 15px 0;
-    color:rgba(98, 55, 228, 0.749);
-    font-size: 2rem;
 }
 
-.user-input{
-    width: 700px;
+
+#dati, #biglietto{
+    width: 800px;
+    min-height: 50px;
+    background-color: white;
     margin: 0 auto;
-    background-color: rgba(255, 255, 255, 0.749);
+    padding: 20px;
+   
+}
+
+.dati_utente{
     display: flex;
     justify-content: space-evenly;
-    align-items: center;
-    box-shadow: 3px 3px 2px 1px rgba(0, 0, 255, 0.13);
 }
 
-.valueuser{
-
-    color:rgba(98, 55, 228, 0.749);
-    font-size: 20px;
+.description{
     text-align: center;
     margin: 10px 0;
-}
-
-.user-input input, button{
-    border-radius: 5px;
-    border: 2px solid rgba(98, 55, 228, 0.749);
-    margin-bottom: 0px;
-    padding: 10px;
-}
-
-#demo-1, #demo-2, #demo-3{
-    text-align: center;
-    color: blue;
-    margin: 5px 0;
+    color: rgb(226, 43, 223);
     font-size: 18px;
 }
 
-#biglietto{
-    margin: 20px 0;
+.genera_biglietto{
+    display: flex;
+    justify-content: center;
     padding: 30px;
-    border: 1px solid #000;
+}
+
+.genera a, .annulla a{
+    padding: 10px;
+    border: 1px solid rgb(226, 43, 223);
+    border-radius: 10px;
+    background-color: rgb(198, 198, 198);
+    margin-left: 10px;
+    color: rgb(226, 43, 223);
     font-size: 18px;
-    background-color:rgba(98, 55, 228, 0.749);
-    color: rgb(255, 255, 255);
+    text-decoration: none;
+
+}
+
+.genera a:hover, .annulla a:hover{
+    background-color: rgb(222, 222, 222);
+    color: rgb(230, 80, 227);
+}
+
+#form_biglietto input{
+    border-radius: 15px;
+    border: 2px solid rgb(226, 43, 223);
+    margin-bottom: 20px;
+}
+
+.description_biglietto{
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+.description_biglietto:first-child{
+    background-color: rgb(198, 198, 198);
+    padding: 0px 30px 50px 30px;
+    font-size: 20px;
+
+}
+
+#nome, #offerta, #numero_carrozza, #numero_C_P, #sconto{
+    margin: 10px 0;
+    padding: 2px;
+    margin: 2px solid black;
+    color:  rgb(75, 13, 74);
     
 }
+
 
 .active{
-
-
-    
+    display: none;
 }
+

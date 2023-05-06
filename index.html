@@ -10,78 +10,85 @@
 
 <body>
     
-  <main id="ticket">
+  
+<div id="form_biglietto">
 
-    <h2>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h2>
+    <h1>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
+    <div id="dati">
 
-    <section class="user-input">
+        <section class="dati_utente">
 
-        <div>
-            <div class="valueuser">Nome e Cognome</div>
-            <input type="text" id="name">
-        </div>
-        
-        <div>
-            <div class="valueuser">Km da percorrere</div>
-            <input type="text" id="distance">
-        </div>
-        
-        <div>
-            <div class="valueuser">Età passeggero</div>
-            <input type="text" id="age">
-        </div>
-        
-      
+            <div class="form">
+                <div class="description">Nome e Cognome</div>
+                <input id="nome_e_cognome" type="text">
+            </div>
 
-    </section>
+            <div class="form">
+                <div class="description">km da percorrere</div>
+                <input id="km_da_percorrere" type="text">
+            </div>
 
-    <section class="user-input">
-       
-        <div class="valueuser">
-            <button  onclick="valuesUser()">Genera</button>
-        </div>
+            <div class="form">
+                <div class="description">La tua età</div>
+                <input id="eta_utente" type="text">
+            </div>
 
-    </section>
+        </section>
 
-    
-    <h2> IL TUO BIGLIETTO </h2>
+        <section class="genera_biglietto">
 
-    <section class="user-input">
+            <div class="genera">
+                <a href="#">Genera</a>
+            </div>
+            <div class="annulla">
+                <a href="#">Annulla</a>
+            </div>
 
-        <div>
-            <div class="valueuser">
+        </section>
+
+    </div>
+
+    <h1>IL TUO BIGLIETTO</h1>
+
+    <div id="biglietto" class="active">
+
+        <section class="dati_utente "> 
+
+            <div class="description_biglietto">
                 Nome passeggero
+                <div id="nome"></div>
             </div>
-            <div id="value-1"></div>
-        </div>
 
-        <div>
-            <div class="valueuser">
-                Km da percorrere
+            <div class="description_biglietto">
+                Offerta
+                <div id="offerta"></div>
             </div>
-            <div id="value-2"></div>
-        </div>
 
-        <div>
-            <div class="valueuser">
-                Età passeggero
+            <div class="description_biglietto">
+                carrozza
+                <div id="numero_carrozza"></div>
+
             </div>
-            <div id="value-3"></div>
-        </div>
+
+            <div class="description_biglietto">
+                codice CP
+                <div id="numero_C_P"></div>
+
+            </div>
+
+            <div class="description_biglietto">
+                costo biglietto
+                <div id="sconto"></div>
+            </div>
+
+        </section>
+        
+        
+    </div>
 
 
-    </section>
-
-    <section id="show" class="user-input">
-
-        <div id="biglietto">Ciao a tutti</div>
-
-    </section>
-
+</div>
    
-
-  </main>
-
 
 
     

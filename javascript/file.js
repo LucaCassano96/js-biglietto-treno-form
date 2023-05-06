@@ -1,67 +1,93 @@
 
+/* let kmDaPercorrere, etaUtente; */
 
 
-function valuesUser(){
-    uptadeUserName()
-    uptadeUserKm()
-    uptadeUserAge()
-}
+ let genera = document.querySelector(".genera");
+ console.log(genera);
 
-let userName;
-let userKm;
-let userAge;
+ genera.addEventListener ("click",  
+ function() {
 
-/* Il programma dovrà chiedere all’utente il Nome */ 
+  /* Il programma dovrà chiedere all’utente il Nome */ 
 
-function uptadeUserName() {
-    userName = document.getElementById("name").value;
-    document.getElementById("value-1").innerHTML = userName;
-  }
-
-
+  let NomeUtente = document.getElementById("nome_e_cognome").value;
+  console.log(NomeUtente);
+  
+  
   /* Il programma dovrà chiedere all’utente il numero di chilometri che vuole percorrere */ 
 
-  function uptadeUserKm() {
-    userKm = parseInt(document.getElementById("distance").value);
-    document.getElementById("value-2").innerHTML = userKm;
-  }
+  let kmDaPercorrere = document.getElementById("km_da_percorrere").value;
+  console.log(kmDaPercorrere);
 
-  /* Il programma dovrà chiedere all’utente l'età del passeggero*/ 
+/* Il programma dovrà chiedere all’utente l'età*/ 
 
-  function uptadeUserAge() {
-    userAge = parseInt(document.getElementById("age").value);
-    document.getElementById("value-3").innerHTML = userAge;
-  }
+  let etaUtente = document.getElementById("eta_utente").value;
+  console.log(etaUtente); 
 
-/* Sulla base di queste informazioni dovrà calcolare il prezzo */
+  /* si disattiva la classe active  */
+  genera = document.getElementById("biglietto");
+  biglietto.classList.remove("active");
 
+/* BIGLIETTO */
 
-    /*Prezzo totale km percorsi per over 18 e under 65 (Prezzo intero)  */
+const prezzoAKm = 0.21;
 
-    let prezzoScontato;
-    let prezzoKm = userKm * 0.21;
+let prezzoBigliettoIntero = kmDaPercorrere * prezzoAKm;
 
-/* Sconto under 18 */
+/* va applicato uno sconto del 20% per i minorenni */
 
-if (userAge < 18){
-    prezzoScontato = (80 * prezzoKm /100);
-    console.log(prezzoScontato.toFixed( 2 ) );
+if(etaUtente < 18){
+
+ vantaggio = "-20%";
+ sconto = (prezzoBigliettoIntero * 80) /100;
+ console.log(`Il costo del biglietto scontato è:${sconto.toFixed(2)}€`);
 }
 
-/* sconto over 65 */
+/* va applicato uno sconto del 40% per gli over 65. */
 
-else if (userAge > 65){
-    prezzoScontato = (60 * prezzoKm /100);
-    console.log(prezzoScontato.toFixed( 2 ) );
-} 
-
-/* Prezzo intero  */
+else if (etaUtente > 65){
+    vantaggio = "-40%";
+    sconto = (prezzoBigliettoIntero * 60) /100;
+    console.log(`Il costo del biglietto scontato è:${sconto.toFixed(2)}€`);
+}
 
 else{
-    prezzoScontato = (prezzoKm);
-    console.log(prezzoScontato.toFixed( 2 ) );
-} 
+    vantaggio = "nessuna";
+    sconto = prezzoBigliettoIntero;
+    console.log(`Il costo del biglietto intero è:${prezzoBigliettoIntero.toFixed(2)}€`);
+}
 
 
-document.getElementById("biglietto").innerHTML = `Il costo del tuo biglietto è: € ${prezzoScontato.toFixed( 2 )}` ;
+/* nome utente */
+document.getElementById("nome").innerHTML = NomeUtente;
 
+/* offerta  */
+document.getElementById("offerta").innerHTML = vantaggio;
+
+/* numero carrozza */
+numeroCarrozza = Math.floor(Math.random()*10) +1;
+document.getElementById("numero_carrozza").innerHTML = numeroCarrozza;
+
+numeroCp = Math.floor(Math.random()*30000) +1;
+document.getElementById("numero_C_P").innerHTML = numeroCp;
+
+/* prezzo finale biglietto */
+
+document.getElementById("sconto").innerHTML = `${sconto.toFixed(2)}€`;
+}
+
+) 
+
+/* fai sparire biglietto */
+
+let annulla = document.querySelector(".annulla");
+ console.log(annulla);
+
+ annulla.addEventListener ("click",  
+ function() {
+  annulla = document.getElementById("biglietto");
+  biglietto.classList.add("active");
+
+ }
+
+ )
